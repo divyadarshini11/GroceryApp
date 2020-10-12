@@ -1,0 +1,41 @@
+body
+{
+    
+    background-color: wheat;
+    border: 5px solid red;
+}
+div
+{
+    background-color: pink;
+    padding: 10px;
+}
+h1
+{
+    color: darkblue;
+    text-decoration: underline ;
+    text-decoration-color: red;
+    text-align: center;
+    
+}
+h2{
+    color:brown;
+    text-align: center;
+}
+h3{
+    color: darkblue;
+    text-align: center
+}
+
+table, td, th
+{
+    text-align: center; 
+    border: 1px solid black;   
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+ul
+{
+    text-align: center;    
+}
