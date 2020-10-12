@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='GroceryApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="japp.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Billing Service</title>
+  </head>
+  <body onclick="showCoords(event)">
+    <h1>GROCERY INDIA</h1>
+
+    <!-- LIST #1 - unlimited items -->
+    <div id="list1" ng-controller='ShoppingListController as list1'>
+      <h2>BUY GROCERY</h2></br>
+      <h4>Enter the item name with it's quantity to generate bill</h4></br>
+      <input type="text" ng-model="list1.itemName" placeholder="item name">
+      <input type="text" ng-model="list1.itemQuantity" placeholder="quantity">
+      <button ng-click="list1.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list1.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list1.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+
+      <button onclick="myFunction()">Submit</button>
+      <p id="demo"></p>
+      <script>
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Items Submitted !!......Printing your bill";
+        }  
+        </script>
+
+        <p id="demo1"></p>
+        <script>
+        function showCoords(event) {
+          var x = event.screenX;
+          var y = event.screenY;
+          var coords = "Mouse Coord:"+ " (" + x + "," + y+")"
+          document.getElementById("demo1").innerHTML = coords;
+        }
+        </script>
+    </div>
+  </body>
+</html>
